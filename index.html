@@ -48,7 +48,6 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body {
-            /* Use Poppins as primary, fallback to Korean fonts */
             font-family: 'Poppins', 'Segoe UI', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             background-color: var(--background-color);
             color: var(--text-color-primary);
@@ -58,7 +57,7 @@
         }
         img { max-width: 100%; height: auto; display: block; }
         a { color: var(--accent-color); text-decoration: none; }
-        a:hover { text-decoration: none; } /* Remove underline globally for modern look */
+        a:hover { text-decoration: none; }
 
         /* --- Preloader --- */
         #preloader {
@@ -208,18 +207,11 @@
             height: 230px; /* Adjust size as needed */
             width: auto;
             margin: 0 auto 1px auto; /* Center horizontally, add bottom margin */
-            /* filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.15)); */ /* Optional shadow */
             transition: transform var(--transition-speed-fast) ease;
         }
         .hero-logo-img:hover {
              transform: scale(1.03); /* Optional hover effect */
         }
-
-        /* H1 styles removed */
-        /*
-        #hero h1 { ... }
-        @keyframes gradient-text-flow { ... }
-        */
 
         /* Catchphrase Styling */
         #hero .catchphrase {
@@ -342,11 +334,9 @@
         .music-info { flex-grow: 1; }
         .music-info h3 { font-size: 1.8em; margin-bottom: 10px; color: var(--accent-color); font-weight: 600; }
         .music-info p { color: var(--text-color-secondary); margin-bottom: 20px; }
-        /* Music section CTA button inherits general .cta-button styles but can be overridden */
         #music .cta-button {
             font-size: 0.9em;
             padding: 10px 25px;
-            /* Inherits base styles from #hero .cta-button */
         }
 
 
@@ -400,10 +390,9 @@
         .social-links a:hover i { color: var(--accent-color); }
         /* Specific icon colors on hover */
         .social-links a[title="Instagram"]:hover i { color: #E1306C; }
-        .social-links a[title="X (Twitter)"]:hover i { color: #ffffff; }
+        .social-links a[title="X (Twitter)"]:hover i { color: #0087ff; }
         .social-links a[title="TikTok"]:hover i { color: #EE1D52; }
         .social-links a[title="POCKETDOLS"]:hover i { color: #FFD700; }
-        /* Connect section CTA button inherits general .cta-button styles */
         #connect .cta-button {
              /* Inherits base styles from #hero .cta-button */
         }
@@ -432,24 +421,13 @@
         }
         @media (max-width: 768px) {
             body { font-size: 15px; }
-            /* Header Responsive */
-            .main-header .container {
-                justify-content: center;
-            }
-            .logo-img {
-                height: 60px;
-            }
-
-            #hero { min-height: 75vh; padding-top: 100px; } /* Adjust padding top for new header height */
-            /* Hero Responsive */
+            .main-header .container { justify-content: center; }
+            .logo-img { height: 60px; }
+            #hero { min-height: 75vh; padding-top: 100px; }
             #hero .hero-content { padding: 50px 30px; border-radius: 20px; }
-            .hero-logo-img {
-                height: 75px; /* Adjust hero logo size */
-                margin-bottom: 20px;
-            }
+            .hero-logo-img { height: 175px; margin-bottom: 20px; } /* Adjusted hero logo size */
             #hero .catchphrase { font-size: 1.1em; max-width: 100%; }
             #hero .cta-button { padding: 12px 35px; font-size: 0.9em; }
-
             .section-header h2 { font-size: 2em; }
             section { padding: 40px 0; }
             .glass-section { padding: 30px; }
@@ -466,31 +444,19 @@
             .sphere-1 { width: 350px; height: 350px; top: -5%; left: -25%; }
             .sphere-2 { width: 300px; height: 300px; bottom: -10%; right: -20%; }
             .sphere-3 { width: 200px; height: 200px; top: 40%; right: -10%; }
-            /* Disable tilt effect on touch devices/smaller screens */
             .member-card:hover, .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
             .member-card:hover .member-image img { transform: scale(1.03); }
             .gallery-item:hover img { transform: scale(1.05); }
         }
         @media (max-width: 480px) {
             body { font-size: 14px; }
-            /* Header Responsive Small */
-            .main-header {
-                padding: 10px 0;
-            }
-            .logo-img {
-                height: 50px;
-            }
-
-            #hero { min-height: 70vh; padding-top: 80px; } /* Adjust padding top */
-             /* Hero Responsive Small */
+            .main-header { padding: 10px 0; }
+            .logo-img { height: 50px; }
+            #hero { min-height: 70vh; padding-top: 80px; }
             #hero .hero-content { padding: 40px 20px; border-radius: 15px; }
-            .hero-logo-img {
-                height: 60px; /* Adjust hero logo size */
-                margin-bottom: 15px;
-            }
+            .hero-logo-img { height: 130px; margin-bottom: 15px; } /* Adjusted hero logo size */
             #hero .catchphrase { font-size: 1em; }
             #hero .cta-button { padding: 10px 30px; font-size: 0.85em; gap: 5px; }
-
             .section-header h2 { font-size: 1.8em; }
             .members-grid { grid-template-columns: 1fr; }
             .member-card { padding: 0; }
@@ -570,7 +536,7 @@
                         </div>
                          <div class="detail-item">
                             <strong>소속사</strong>
-                            <span>VT 엔터테인먼트 <br><small>(VANNER 전 소속사)</small></span>
+                            <span>VT 엔터테인먼트</span>
                         </div>
                          <div class="detail-item">
                             <strong>팬덤명</strong>
@@ -590,7 +556,7 @@
                 </div>
                 <div class="members-grid">
                     <!-- Member Cards with Tilt Effect -->
-                    <div class="member-card tilt-card">
+                    <div class="member-card tilt-card reveal">
                         <div class="member-image"><img src="https://i.namu.wiki/i/c4X_0qc4xWLjiIWPpaEIEBDE6wSZxelVB__mDyY4RN1gEJP5motvc_WC7Li55zROo-LI_79EBglRFjReb1EHSFrz9JCbLi7v14jzsliheK6_bvcdRQrm9VpTeF9EenfPPlFKFb9zD8M24yq_7fMo7w.webp" alt="선호 프로필 사진"></div>
                         <div class="member-info">
                             <h3>선호 (Seonho)</h3>
@@ -598,7 +564,7 @@
                             <p class="details"><span class="flag">🇰🇷</span> 1996.05.14</p>
                         </div>
                     </div>
-                    <div class="member-card tilt-card">
+                    <div class="member-card tilt-card reveal">
                         <div class="member-image"><img src="https://i.namu.wiki/i/ZC6RLnJPy2agebndYx2MBPVQOJs1FVtQ-sIBGhQF4u7PrEs3HY07JWL6FMJ9kAqivUSW4TPlS6PCKIOE8zWXlBvgnfH-bbVDDSc5KHDeN4vc6s5tjDJJni9hef3OKbQ3novnWHIkTbqRD2bJiLe8Dg.webp" alt="지환 프로필 사진"></div>
                          <div class="member-info">
                             <h3>지환 (Jihwan)</h3>
@@ -606,7 +572,7 @@
                             <p class="details"><span class="flag">🇰🇷</span> 2001.08.17</p>
                         </div>
                     </div>
-                    <div class="member-card tilt-card">
+                    <div class="member-card tilt-card reveal">
                         <div class="member-image"><img src="https://i.namu.wiki/i/_e5fbpOlUNIoGGeRFucpKodPEeiEAkdjYO5UL14O0qR-Cw27UrKQRJqDShEtlPQDdnXojWIbNbKEoYlnpm4csK_0mUR_hxHuMcd2ZKASS9Y7D82DFM6q2ni7CXQXjNh1PrSlXGYvtHBPu5zk7-u4Sw.webp" alt="네오 프로필 사진"></div>
                          <div class="member-info">
                             <h3>네오 (Neo)</h3>
@@ -614,7 +580,7 @@
                             <p class="details"><span class="flag">🇯🇵</span> 2002.08.07</p>
                         </div>
                     </div>
-                    <div class="member-card tilt-card">
+                    <div class="member-card tilt-card reveal">
                         <div class="member-image"><img src="https://i.namu.wiki/i/kYzBqFsa1znZNsTXDO4_hQe6XGbN3dieBQTlyw0fVu_bVy7F4l-jgNOMwIdRSHg04k4Z77KrgUUbbnu7PReWnyYwVPP74YWp7Rp4Z5rNyiQ0CNZ1J5PXxYewlRqBpgLOPEk3SRTgim1bGJRPWkNvSQ.webp" alt="R1KE 프로필 사진"></div>
                          <div class="member-info">
                             <h3>R1KE</h3>
@@ -622,7 +588,7 @@
                             <p class="details"><span class="flag">🇯🇵</span> 2002.11.22</p>
                         </div>
                     </div>
-                    <div class="member-card tilt-card">
+                    <div class="member-card tilt-card reveal">
                         <div class="member-image"><img src="https://i.namu.wiki/i/hcx2Xn3P6qO9wUN1X5GuMePZ6oysdVOXxpQeHWlMyf6-CQeR6jv0fEc3B39oyoZz9GAt8rh2CBonk-zwO4UPYOwbOnUoFzyU1L_0NihGFdAW0Ely9ikCSCsiitPtFXcAr_8n0CNtw_VFfHK81OX6zg.webp" alt="민 프로필 사진"></div>
                          <div class="member-info">
                             <h3>민 (Min)</h3>
@@ -630,7 +596,7 @@
                             <p class="details"><span class="flag">🇰🇷</span> 2003.05.25</p>
                         </div>
                     </div>
-                    <div class="member-card tilt-card">
+                    <div class="member-card tilt-card reveal">
                         <div class="member-image"><img src="https://i.namu.wiki/i/-2caIfm-IRA3ObJSsG7Zlntk-ALURXr5sH8DCEdKy134X3Fs65nFdv3ChUQpv7eMp0kxDDNIU0urXnYD0S96TCQZ2tXgefg-zlT1KHxH13kMpSBLBwX3bZYLiXAjh3rBYywmhI96eSJLb1QxG_UYvg.webp" alt="츠키토 프로필 사진"></div>
                          <div class="member-info">
                             <h3>츠키토 (Tsukito)</h3>
@@ -638,7 +604,7 @@
                             <p class="details"><span class="flag">🇯🇵</span> 2004.07.01</p>
                         </div>
                     </div>
-                    <div class="member-card tilt-card">
+                    <div class="member-card tilt-card reveal">
                         <div class="member-image"><img src="https://i.namu.wiki/i/5t3FOtCr5xdhwQt7hY8Xz4AunOwLJbACAimIclSja0HGZXKjdxB6J_9ccJsPMqMERuraKrEkiiR9ec2TSY1nXTaT2P3Qa8bGZQJNzP5CNZXKthles4PXxldMFfv8h9CMXHd6mgBTCtXz6IEnalKa8Q.webp" alt="혀기 프로필 사진"></div>
                          <div class="member-info">
                             <h3>혀기 (Hyeogi)</h3>
@@ -666,7 +632,7 @@
                         <h3>RE: TRY1</h3>
                         <p>디지털 싱글 | 발매일: 2024.10.23</p>
                         <p>TRY1의 음악 세계를 엿볼 수 있는 첫 번째 작품으로, 그들만의 시그니처 에너지와 스타일을 보여줍니다. 여정의 시작을 알리는 강력한 선언입니다.</p>
-                        <a href="https://www.youtube.com/@tryone-1" target="_blank" rel="noopener noreferrer" class="cta-button">지금 듣기</a>
+                        <a href="https://www.youtube.com/watch?app=desktop&v=K2aDCICnt3o&ab_channel=TRY1" target="_blank" rel="noopener noreferrer" class="cta-button">지금 듣기</a>
                     </div>
                 </div>
              </div>
@@ -680,15 +646,15 @@
                     <p>TRY1의 라이브 공연 및 최신 일정을 확인하세요.</p>
                 </div>
                 <ul class="activities-list">
-                    <li>
+                    <li class="reveal">
                         <span class="date">2025.01.24 ~ 2025.03.02</span>
                         <span class="event"><a href="https://www.instagram.com/p/DDD-1eAzOMz/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer">오사카 라이브 투어</a></span>
                     </li>
-                    <li>
+                    <li class="reveal">
                         <span class="date">2024.10.12 ~ 2025.01.05</span>
                         <span class="event">도쿄 라이브 투어</span>
                     </li>
-                     <li>
+                     <li class="reveal">
                         <span class="date">2024.10.23</span>
                         <span class="event">디지털 싱글 "RE: TRY1" 발매</span>
                     </li>
@@ -705,13 +671,13 @@
                 </div>
                 <div class="gallery-grid">
                      <!-- Gallery Items with Tilt Effect -->
-                    <div class="gallery-item tilt-card">
+                    <div class="gallery-item tilt-card reveal">
                         <img src="https://i.namu.wiki/i/Z0ep00E8b-lSr6ZZTH3awo7qAAvxJKcIdu139EPOM9OJYMOixYHLbcaapHxl8a3CjXtDssm2TTiOiw4E7_vBd33jVo8sjO7XaBmUUFPSNboq4B06o6vpWxJAWSlq0LM-cfIMhvButHOFqL6MvFxUaA.webp" alt="TRY1 단체 사진 1">
                     </div>
-                    <div class="gallery-item tilt-card">
+                    <div class="gallery-item tilt-card reveal">
                          <img src="https://i.namu.wiki/i/oW688joxYwyC61g9ndDSUA78qhBQIfrW-KyhFEs8btsNShXeMxRj7Ciw4esy2EY9r4cMvhpdrkO0TXY2GSDc8OEDZqoi7rwQmEylXkVBiVEwZBeOyHz5eknfRpmJ61bQJhNbo01EVkuxn3XWRfVHQA.webp" alt="TRY1 단체 사진 2">
                     </div>
-                    <div class="gallery-item tilt-card">
+                    <div class="gallery-item tilt-card reveal">
                          <img src="https://i.namu.wiki/i/HMcMRV2mSnrtt0uTq7hFR0fasmccuYbm05mPHx1zSEj5qVpmoaX_As0QH4wTfGzg51rjeFbUMgIdDHpDLUrnxOcLexwzEdO8f0gSbNg0x8U5RgH7EJO3Z7688pF1cDyBrEFa8vRoxTJZCxMfPzxQjg.webp" alt="TRY1 단체 사진 3">
                     </div>
                 </div>
@@ -726,11 +692,10 @@
                     <p>TRY1에 대한 흥미로운 사실들.</p>
                 </div>
                  <ul>
-                    <li><strong>그룹명 의미:</strong> 'TRY1'은 'Try One'과 'Triangle'의 합성어로, 팬덤명 'TR1ANGLE'과 함께 '팬들과 하나 되어 정상을 향해 나아가겠다'는 포부를 담고 있습니다.</li>
-                    <li><strong>프리 데뷔:</strong> 2024년 10월 23일 디지털 싱글 'RE: TRY1'을 발매하며 프리 데뷔했습니다.</li>
-                    <li><strong>다국적 구성:</strong> 한국인 멤버 4명(선호, 지환, 민, 혀기)과 일본인 멤버 3명(네오, R1KE, 츠키토)으로 구성되어 있습니다.</li>
-                    <li><strong>소속사:</strong> 과거 그룹 VANNER가 소속되었던 VT 엔터테인먼트 소속입니다.</li>
-                    <li><strong>라이브 활동:</strong> 데뷔 전부터 일본 도쿄와 오사카에서 활발한 라이브 투어를 진행하며 팬들과 만나고 있습니다.</li>
+                    <li class="reveal"><strong>그룹명 의미:</strong> 'TRY1'은 'Try One'과 'Triangle'의 합성어로, 팬덤명 'TR1ANGLE'과 함께 '팬들과 하나 되어 정상을 향해 나아가겠다'는 포부를 담고 있습니다.</li>
+                    <li class="reveal"><strong>프리 데뷔:</strong> 2024년 10월 23일 디지털 싱글 'RE: TRY1'을 발매하며 프리 데뷔했습니다.</li>
+                    <li class="reveal"><strong>다국적 구성:</strong> 한국인 멤버 4명(선호, 지환, 민, 혀기)과 일본인 멤버 3명(네오, R1KE, 츠키토)으로 구성되어 있습니다.</li>
+                    <li class="reveal"><strong>라이브 활동:</strong> 데뷔 전부터 일본 도쿄와 오사카에서 활발한 라이브 투어를 진행하며 팬들과 만나고 있습니다.</li>
                 </ul>
              </div>
         </section>
@@ -757,7 +722,7 @@
                     </a>
                 </div>
                 <!-- Replace # with actual fan community link -->
-                <a href="#" class="cta-button">팬덤 가입하기</a>
+                <a href="https://www.youtube.com/@tryone-1" class="cta-button">Official Youtube</a>
              </div>
         </section>
     </main>
@@ -784,19 +749,24 @@
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // 요소가 화면에 들어오면 visible 클래스 추가
                     entry.target.classList.add('visible');
-                    // observer.unobserve(entry.target); // Optional: Unobserve after reveal
+                } else {
+                    // 요소가 화면에서 나가면 visible 클래스 제거 (스크롤 올릴 때 다시 애니메이션 적용 위함)
+                    entry.target.classList.remove('visible');
                 }
-                // else { // Optional: Reset animation when scrolling up
-                //     entry.target.classList.remove('visible');
-                // }
             });
-        }, { threshold: 0.1 });
+        }, {
+            threshold: 0.1 // 요소가 10% 보일 때 애니메이션 트리거
+        });
 
-        revealElements.forEach(el => revealObserver.observe(el));
+        revealElements.forEach(el => {
+            // 모든 .reveal 요소에 IntersectionObserver 적용
+            revealObserver.observe(el);
+            // 초기에 보이지 않도록 설정 (CSS에서 이미 처리하지만, JS로도 명시)
+            el.classList.remove('visible');
+        });
 
-        // --- Active Nav Link (REMOVED as nav is removed) ---
-        // Navigation related JS is removed as the navigation menu is no longer present.
 
         // --- 3D Tilt Effect for Cards ---
         const tiltCards = document.querySelectorAll('.tilt-card');
@@ -828,6 +798,7 @@
             });
         } else {
             console.log("Tilt effect disabled on touch device.");
+            // 터치 기기에서는 tilt 효과 대신 기본 hover 효과만 적용되도록 CSS에서 처리됨
         }
 
     </script>
